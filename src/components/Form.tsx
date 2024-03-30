@@ -3,7 +3,7 @@ import "../App.css";
 import { useRef, useState } from "react"
 import { ID, databases } from "../appwrite";
 
-const Form = () => {
+const Form = ({setFetchData, fetchData}:any) => {
 
     const titleRef: any = useRef()
     const textRef: any = useRef()
@@ -49,6 +49,8 @@ const Form = () => {
                 setTimeout(() => {
                     setSuccessMessage(null)
                 }, 1500)
+                e.target.reset()
+                setFetchData(!fetchData)
             }, function (error) {
                 console.log(error);
                 setIsLoading(false)
@@ -81,7 +83,7 @@ const Form = () => {
             }
             <form onSubmit={create}>
                 <input minLength={1} maxLength={20} ref={titleRef} type="text" placeholder="Enter Title..." />
-                <textarea placeholder="Enter Text..." ref={textRef}></textarea>
+                <textarea minLength={1} maxLength={1000} placeholder="Enter Text..." ref={textRef}></textarea>
                 <button type="submit">
                     {
                         isLoading && <span className="loader"></span>
