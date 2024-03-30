@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: sans-serif;
+}
+
+@mixin formComponents($width) {
+  padding: 0.8em;
+  border-radius: 6px;
+  width: $width;
+  border: 0;
+}
+
+@mixin button {
+  background-color: #0099ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+@mixin errorMessage($color) {
+  width: 100%;
+  text-align: center;
+  color: $color;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  #root {
+    width: 100%;
+    height: 100%;
+
+    .profile {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1em;
+      padding: 1em;
+
+      button {
+        @include formComponents(10em);
+        @include button();
+      }
+
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+      padding: 1em;
+
+      input {
+        @include formComponents(100%);
+        background-color: #e7e7e7
+      }
+
+      textarea {
+        @include formComponents(100%);
+        height: 10em;
+        background-color: #e7e7e7;
+        resize: none;
+      }
+
+      button {
+        @include formComponents(10em);
+        @include button();
+        margin-left: auto;
+      }
+
+    }
+
+    .screen {
+      width: 100vw;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .loader {
+        width: 40px;
+        height: 40px;
+        border: 5px solid #333;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+
+    }
+
+    .errorMessage {
+      @include errorMessage(#c23b3b);
+    }
+
+    .successMessage {
+      @include errorMessage(#1d813f);
+    }
+
+    .login-form {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+      padding: 1em;
+
+      form {
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        padding: 1em;
+        box-shadow: 0 0 8px #e0e0e0;
+        border-radius: 10px;
+
+        h2 {
+          padding: 0.5em 0;
+        }
+
+        p {
+          cursor: pointer;
+          width: 100%;
+          text-align: center;
+          font-size: 0.8em;
+        }
+
+        .errorMessage {
+          @include errorMessage(#c23b3b);
+        }
+
+        input {
+          background-color: #e7e7e7;
+          @include formComponents(100%);
+        }
+
+        button {
+          @include formComponents(100%);
+          @include button();
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.loader {
+  margin-right: 1em;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

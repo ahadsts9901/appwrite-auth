@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+body #root {
+  width: 100%;
+  height: 100%;
+}
+body #root .profile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+body #root .profile button {
+  padding: 0.8em;
+  border-radius: 6px;
+  width: 10em;
+  border: 0;
+  background-color: #0099ff;
+  color: #fff;
+  cursor: pointer;
+}
+body #root form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+body #root form input {
+  padding: 0.8em;
+  border-radius: 6px;
+  width: 100%;
+  border: 0;
+  background-color: #e7e7e7;
+}
+body #root form textarea {
+  padding: 0.8em;
+  border-radius: 6px;
+  width: 100%;
+  border: 0;
+  height: 10em;
+  background-color: #e7e7e7;
+  resize: none;
+}
+body #root form button {
+  padding: 0.8em;
+  border-radius: 6px;
+  width: 10em;
+  border: 0;
+  background-color: #0099ff;
+  color: #fff;
+  cursor: pointer;
+  margin-left: auto;
+}
+body #root .screen {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #root .screen .loader {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #333;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+body #root .errorMessage {
+  width: 100%;
+  text-align: center;
+  color: #c23b3b;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+body #root .successMessage {
+  width: 100%;
+  text-align: center;
+  color: #1d813f;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+body #root .login-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+body #root .login-form form {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  box-shadow: 0 0 8px #e0e0e0;
+  border-radius: 10px;
+}
+body #root .login-form form h2 {
+  padding: 0.5em 0;
+}
+body #root .login-form form p {
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8em;
+}
+body #root .login-form form .errorMessage {
+  width: 100%;
+  text-align: center;
+  color: #c23b3b;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+body #root .login-form form input {
+  background-color: #e7e7e7;
+  padding: 0.8em;
+  border-radius: 6px;
+  width: 100%;
+  border: 0;
+}
+body #root .login-form form button {
+  padding: 0.8em;
+  border-radius: 6px;
+  width: 100%;
+  border: 0;
+  background-color: #0099ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.loader {
+  margin-right: 1em;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=App.css.map */
