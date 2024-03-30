@@ -151,8 +151,9 @@ const Home = () => {
         isLoading ? <div className="screen"><span className="loader"></span></div> :
           posts.length < 1 ? <div className="screen"><h2>No Post Found...</h2></div> :
             <div className="postCont">
-              {posts.map((post: any) => (
+              {posts.map((post: any, i: number) => (
                 <Post
+                  key={i}
                   title={post?.title}
                   text={post?.text}
                   slug={post?.slug}

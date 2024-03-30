@@ -2,6 +2,7 @@ import "../App.css"
 import { useState, useEffect } from 'react';
 import { account, ID } from '../appwrite';
 import { useNavigate } from "react-router-dom";
+import { FaFacebook, FaGoogle } from "react-icons/fa6";
 
 const Signup = ({ setIsLoginPage }: any) => {
 
@@ -77,6 +78,30 @@ const Signup = ({ setIsLoginPage }: any) => {
         }
     }
 
+    const googleAuth = async (e: any) => {
+
+        e.preventDefault()
+
+        account.createOAuth2Session(
+            "google",
+            "https://appwrite-auth-sts.surge.sh/",
+            "https://appwrite-auth-sts.surge.sh/"
+        )
+
+    }
+
+    const facebookAuth = async (e: any) => {
+
+        e.preventDefault()
+
+        account.createOAuth2Session(
+            "facebook",
+            "https://appwrite-auth-sts.surge.sh/",
+            "https://appwrite-auth-sts.surge.sh/"
+        )
+
+    }
+
     return (
         <div className='login-form'>
             <form onSubmit={signup}>
@@ -98,6 +123,10 @@ const Signup = ({ setIsLoginPage }: any) => {
                         isLoading ? "Processing" : "Signup"
                     }
                 </button>
+                <div className="social">
+                    <FaGoogle className="google" onClick={(e) => googleAuth(e)} />
+                    <FaFacebook className="google" onClick={(e) => facebookAuth(e)} />
+                </div>
             </form>
         </div>
     );

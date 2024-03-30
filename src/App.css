@@ -45,6 +45,17 @@ body #root .profile {
   padding: 1em;
   margin: 0 auto;
 }
+body #root .profile .guest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+body #root .profile .guest .two {
+  color: #f06e6e;
+  cursor: pointer;
+  text-decoration: underline;
+}
 body #root .profile button {
   padding: 0.8em;
   border-radius: 6px;
@@ -256,6 +267,18 @@ body #root .login-form form button {
   border: 0;
   background-color: #0099ff;
   color: #fff;
+  cursor: pointer;
+}
+body #root .login-form form .social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+body #root .login-form form .google {
+  width: 1.3em !important;
+  height: 1.3em !important;
   cursor: pointer;
 }
 

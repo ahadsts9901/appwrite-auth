@@ -60,11 +60,11 @@ body {
       gap: 0.4em;
       flex-wrap: wrap;
 
-      span{
+      span {
         color: #f06e6e;
       }
 
-      #icon{
+      #icon {
         width: 1.4em;
         height: 1.4em;
       }
@@ -79,6 +79,20 @@ body {
       gap: 1em;
       padding: 1em;
       margin: 0 auto;
+
+      .guest {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+
+        .two{
+          color: #f06e6e;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+
+      }
 
       button {
         @include formComponents(10em);
@@ -276,6 +290,20 @@ body {
           @include button();
         }
 
+        .social {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1em;
+        }
+
+        .google {
+          width: 1.3em !important;
+          height: 1.3em !important;
+          cursor: pointer;
+        }
+
       }
 
     }
@@ -350,7 +378,7 @@ div:where(.swal2-container) div:where(.swal2-loader) {
   display: none;
 }
 
-#message{
+#message {
   width: 100%;
   text-align: center;
   color: #f06e6e;
@@ -362,7 +390,7 @@ div:where(.swal2-container) div:where(.swal2-loader) {
   padding: 1em 0;
   font-size: 0.9em;
 
-  span{
+  span {
     color: #0099ff;
   }
 

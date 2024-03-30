@@ -41,7 +41,12 @@ const Logout = () => {
     return (
         <>
             <div className="profile">
-                <p>{loggedInUser && loggedInUser.name}</p>
+                <p>{loggedInUser ? loggedInUser.name :
+                    <div className="guest">
+                        <p className="one">Guest</p>
+                        <p className="two" onClick={() => navigate("/auth")}>Login Now</p>
+                    </div>
+                }</p>
                 <button onClick={logout}>
                     {
                         isLoading && <span className="loader"></span>
